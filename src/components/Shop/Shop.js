@@ -9,12 +9,15 @@ import './Shop.css';
 
 const Shop = () => {
     const products = useLoaderData();
+    console.log(products);
     const [cart, setCart] = useState([]);
 
     const handleClearCart = () =>{
         setCart([]);
         deleteShoppingCart();
     }
+
+    console.log(products);
 
     useEffect(() =>{
         const storedCart = getStoredCart();
